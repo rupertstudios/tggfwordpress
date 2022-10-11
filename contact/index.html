@@ -36,9 +36,8 @@
 <style id="wp-block-paragraph-inline-css">
 .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;line-height:.68;font-weight:100;margin:.05em .1em 0 0;text-transform:uppercase;font-style:normal}p.has-drop-cap.has-background{overflow:hidden}p.has-background{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}
 </style>
-<link rel="stylesheet" id="dashicons-css" href="https://rupertstudios.github.io/tggfwordpress/wp-includes/css/dashicons.min.css" media="all">
-<link rel="stylesheet" id="nf-display-css" href="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/ninja-forms/assets/css/display-opinions-light.css" media="all">
-<link rel="stylesheet" id="nf-font-awesome-css" href="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/ninja-forms/assets/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" id="fluent-form-styles-css" href="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/fluentform/public/css/fluent-forms-public.css" media="all">
+<link rel="stylesheet" id="fluentform-public-default-css" href="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/fluentform/public/css/fluentform-public-default.css" media="all">
 <style id="wp-block-post-comments-inline-css">
 .wp-block-post-comments .alignleft{float:left}.wp-block-post-comments .alignright{float:right}.wp-block-post-comments .navigation:after{content:"";display:table;clear:both}.wp-block-post-comments .commentlist{clear:both;list-style:none;margin:0;padding:0}.wp-block-post-comments .commentlist .comment{min-height:2.25em;padding-left:3.25em}.wp-block-post-comments .commentlist .comment p{font-size:1em;line-height:1.8;margin:1em 0}.wp-block-post-comments .commentlist .children{list-style:none;margin:0;padding:0}.wp-block-post-comments .comment-author{line-height:1.5}.wp-block-post-comments .comment-author .avatar{border-radius:1.5em;display:block;float:left;height:2.5em;margin-top:.5em;margin-right:.75em;width:2.5em}.wp-block-post-comments .comment-author cite{font-style:normal}.wp-block-post-comments .comment-meta{font-size:.875em;line-height:1.5}.wp-block-post-comments .comment-meta b{font-weight:400}.wp-block-post-comments .comment-meta .comment-awaiting-moderation{margin-top:1em;margin-bottom:1em;display:block}.wp-block-post-comments .comment-body .commentmetadata{font-size:.875em}.wp-block-post-comments .comment-form-author label,.wp-block-post-comments .comment-form-comment label,.wp-block-post-comments .comment-form-email label,.wp-block-post-comments .comment-form-url label{display:block;margin-bottom:.25em}.wp-block-post-comments .comment-form input:not([type=submit]):not([type=checkbox]),.wp-block-post-comments .comment-form textarea{display:block;box-sizing:border-box;width:100%}.wp-block-post-comments .comment-form-cookies-consent{display:flex;gap:.25em}.wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent{margin-top:.35em}.wp-block-post-comments .comment-reply-title{margin-bottom:0}.wp-block-post-comments .comment-reply-title :where(small){font-size:var(--wp--preset--font-size--medium,smaller);margin-left:.5em}.wp-block-post-comments .reply{font-size:.875em;margin-bottom:1.4em}.wp-block-post-comments input:not([type=submit]),.wp-block-post-comments textarea{border:1px solid #949494;font-size:1em;font-family:inherit}.wp-block-post-comments input:not([type=submit]):not([type=checkbox]),.wp-block-post-comments textarea{padding:calc(.667em + 2px)}.wp-block-post-comments input[type=submit]{border:none}
 </style>
@@ -67,15 +66,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <script src="https://rupertstudios.github.io/tggfwordpress/wp-includes/blocks/navigation/view.min.js" id="wp-block-navigation-view-js"></script>
 <script src="https://rupertstudios.github.io/tggfwordpress/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
 <script src="https://rupertstudios.github.io/tggfwordpress/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-<script src="https://rupertstudios.github.io/tggfwordpress/wp-includes/js/underscore.min.js" id="underscore-js"></script>
-<script src="https://rupertstudios.github.io/tggfwordpress/wp-includes/js/backbone.min.js" id="backbone-js"></script>
-<script src="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/ninja-forms/assets/js/min/front-end-deps.js" id="nf-front-end-deps-js"></script>
-<script id="nf-front-end-js-extra">
-var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","formHoneypot":"If you are a human seeing this field, please leave it empty.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"recaptchaConsentMissing":"reCapctha validation couldn't load.","recaptchaMissingCookie":"reCaptcha v3 validation couldn't load the cookie needed to submit the form.","recaptchaConsentEvent":"Accept reCaptcha cookies before sending the form."};
-var nfFrontEnd = {"adminAjax":"https:\/\/rupertstudios.github.io\/tggfwordpress\/wp-admin\/admin-ajax.php","ajaxNonce":"e24e4a6095","requireBaseUrl":"https:\/\/rupertstudios.github.io\/tggfwordpress\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","recaptcha_v3":"recaptcha_v3","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":"light","filter_esc_status":"false","nf_consent_status_response":[]};
-var nfRepeater = {"add_repeater_child_field_text":"Add "};
-</script>
-<script src="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/ninja-forms/assets/js/min/front-end.js" id="nf-front-end-js"></script>
 
 
 
@@ -164,14 +154,9 @@ var nfRepeater = {"add_repeater_child_field_text":"Add "};
 <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
-<noscript class="ninja-forms-noscript-message">
-    Notice: JavaScript is required for this content.</noscript><div id="nf-form-1-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-1" aria-describedby="nf-form-errors-1" role="form">
-
-    <div class="nf-loading-spinner"></div>
-
-</div>
-        
-        <script>var formDisplay=1;var nfForms=nfForms||[];var form=[];form.id='1';form.settings={"objectType":"Form Setting","editActive":true,"title":"Contact Me","key":"","created_at":"2022-10-09 22:17:59","default_label_pos":"above","conditions":[],"show_title":0,"clear_complete":"1","hide_complete":"1","wrapper_class":"","element_class":"","add_submit":"1","logged_in":"","not_logged_in_msg":"","sub_limit_number":"","sub_limit_msg":"","calculations":[],"formContentData":["name","email","message","submit"],"container_styles_background-color":"","container_styles_border":"","container_styles_border-style":"","container_styles_border-color":"","container_styles_color":"","container_styles_height":"","container_styles_width":"","container_styles_font-size":"","container_styles_margin":"","container_styles_padding":"","container_styles_display":"","container_styles_float":"","container_styles_show_advanced_css":"0","container_styles_advanced":"","title_styles_background-color":"","title_styles_border":"","title_styles_border-style":"","title_styles_border-color":"","title_styles_color":"","title_styles_height":"","title_styles_width":"","title_styles_font-size":"","title_styles_margin":"","title_styles_padding":"","title_styles_display":"","title_styles_float":"","title_styles_show_advanced_css":"0","title_styles_advanced":"","row_styles_background-color":"","row_styles_border":"","row_styles_border-style":"","row_styles_border-color":"","row_styles_color":"","row_styles_height":"","row_styles_width":"","row_styles_font-size":"","row_styles_margin":"","row_styles_padding":"","row_styles_display":"","row_styles_show_advanced_css":"0","row_styles_advanced":"","row-odd_styles_background-color":"","row-odd_styles_border":"","row-odd_styles_border-style":"","row-odd_styles_border-color":"","row-odd_styles_color":"","row-odd_styles_height":"","row-odd_styles_width":"","row-odd_styles_font-size":"","row-odd_styles_margin":"","row-odd_styles_padding":"","row-odd_styles_display":"","row-odd_styles_show_advanced_css":"0","row-odd_styles_advanced":"","success-msg_styles_background-color":"","success-msg_styles_border":"","success-msg_styles_border-style":"","success-msg_styles_border-color":"","success-msg_styles_color":"","success-msg_styles_height":"","success-msg_styles_width":"","success-msg_styles_font-size":"","success-msg_styles_margin":"","success-msg_styles_padding":"","success-msg_styles_display":"","success-msg_styles_show_advanced_css":"0","success-msg_styles_advanced":"","error_msg_styles_background-color":"","error_msg_styles_border":"","error_msg_styles_border-style":"","error_msg_styles_border-color":"","error_msg_styles_color":"","error_msg_styles_height":"","error_msg_styles_width":"","error_msg_styles_font-size":"","error_msg_styles_margin":"","error_msg_styles_padding":"","error_msg_styles_display":"","error_msg_styles_show_advanced_css":"0","error_msg_styles_advanced":"","allow_public_link":0,"embed_form":"","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","currency":"EUR","unique_field_error":"A form with this value has already been submitted.","drawerDisabled":false,"ninjaForms":"Ninja Forms","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formHoneypot":"If you are a human seeing this field, please leave it empty.","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":false,"thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"recaptchaConsentMissing":"reCapctha validation couldn't load.","recaptchaMissingCookie":"reCaptcha v3 validation couldn't load the cookie needed to submit the form.","recaptchaConsentEvent":"Accept reCaptcha cookies before sending the form.","currency_symbol":"€","beforeForm":"","beforeFields":"","afterFields":"","afterForm":""};form.fields=[{"objectType":"Field","objectDomain":"fields","editActive":false,"order":1,"idAttribute":"id","label":"Name","key":"name","type":"textbox","created_at":"2022-10-09 22:18:00","label_pos":"above","required":1,"placeholder":"","default":"","wrapper_class":"","element_class":"","container_class":"","input_limit":"","input_limit_type":"characters","input_limit_msg":"Character(s) left","manual_key":"","disable_input":"","admin_label":"","help_text":"","desc_text":"","disable_browser_autocomplete":"","mask":"","custom_mask":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3277","custom_name_attribute":"","personally_identifiable":"","value":"","id":1,"beforeField":"","afterField":"","parentType":"textbox","element_templates":["textbox","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":2,"idAttribute":"id","label":"Email","key":"email","type":"email","created_at":"2022-10-09 22:18:00","label_pos":"above","required":1,"placeholder":"","default":"","wrapper_class":"","element_class":"","container_class":"","admin_label":"","help_text":"","desc_text":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3281","custom_name_attribute":"email","personally_identifiable":1,"value":"","id":2,"beforeField":"","afterField":"","parentType":"email","element_templates":["email","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":3,"idAttribute":"id","label":"Message","key":"message","type":"textarea","created_at":"2022-10-09 22:18:00","label_pos":"above","required":1,"placeholder":"","default":"","wrapper_class":"","element_class":"","container_class":"","input_limit":"","input_limit_type":"characters","input_limit_msg":"Character(s) left","manual_key":"","disable_input":"","admin_label":"","help_text":"","desc_text":"","disable_browser_autocomplete":"","textarea_rte":"","disable_rte_mobile":"","textarea_media":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3284","value":"","id":3,"beforeField":"","afterField":"","parentType":"textarea","element_templates":["textarea","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":5,"idAttribute":"id","label":"Submit","key":"submit","type":"submit","created_at":"2022-10-09 22:18:00","processing_label":"Processing","container_class":"","element_class":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","submit_element_hover_styles_background-color":"","submit_element_hover_styles_border":"","submit_element_hover_styles_border-style":"","submit_element_hover_styles_border-color":"","submit_element_hover_styles_color":"","submit_element_hover_styles_height":"","submit_element_hover_styles_width":"","submit_element_hover_styles_font-size":"","submit_element_hover_styles_margin":"","submit_element_hover_styles_padding":"","submit_element_hover_styles_display":"","submit_element_hover_styles_float":"","submit_element_hover_styles_show_advanced_css":0,"submit_element_hover_styles_advanced":"","cellcid":"c3287","id":4,"beforeField":"","afterField":"","value":"","label_pos":"above","parentType":"textbox","element_templates":["submit","button","input"],"old_classname":"","wrap_template":"wrap-no-label"}];nfForms.push(form);</script>
+<div class="fluentform fluentform_wrapper_3"><form data-form_id="3" id="fluentform_3" class="frm-fluent-form fluent_form_3 ff-el-form-top ff_form_instance_3_1 ff-form-loading" data-form_instance="ff_form_instance_3_1" method="POST"><input type="hidden" name="__fluent_form_embded_post_id" value="75"><input type="hidden" id="_fluentform_3_fluentformnonce" name="_fluentform_3_fluentformnonce" value="e48b2ab619"><input type="hidden" name="_wp_http_referer" value="/tggfwordpress/contact/"><div class="ff-el-group"><div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_3_input_text">Name</label> </div><div class="ff-el-input--content"><input type="text" name="input_text" class="ff-el-form-control" data-name="input_text" id="ff_3_input_text"></div></div><div class="ff-el-group"><div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_3_email">Email</label> </div><div class="ff-el-input--content"><input type="email" name="email" id="ff_3_email" class="ff-el-form-control" data-name="email"></div></div><div class="ff-el-group"><div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_3_input_text_1">Messsage</label> </div><div class="ff-el-input--content"><input type="text" name="input_text_1" class="ff-el-form-control" data-name="input_text_1" id="ff_3_input_text_1"></div></div><div class="ff-el-group ff-text-center ff_submit_btn_wrapper"><button type="submit" class="ff-btn ff-btn-submit ff-btn-lg ff_btn_style">Submit</button></div></form><div id="fluentform_3_errors" class="ff-errors-in-stack ff_form_instance_3_1 ff-form-loading_errors ff_form_instance_3_1_errors"></div></div>        <script type="text/javascript">
+            window.fluent_form_ff_form_instance_3_1 = {"id":"3","settings":{"layout":{"labelPlacement":"top","helpMessagePlacement":"with_label","errorMessagePlacement":"inline","asteriskPlacement":"asterisk-right"},"restrictions":{"denyEmptySubmission":{"enabled":false}}},"form_instance":"ff_form_instance_3_1","form_id_selector":"fluentform_3","rules":{"input_text":{"required":{"value":true,"message":"This field is required"}},"email":{"required":{"value":true,"message":"This field is required"},"email":{"value":true,"message":"This field must contain a valid email"}},"input_text_1":{"required":{"value":true,"message":"This field is required"}}}};
+                    </script>
         
 
 
@@ -193,10 +178,6 @@ var nfRepeater = {"add_repeater_child_field_text":"Add "};
 
 
 <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div>[formidable id=”2″]</div>
 </div>
 
 
@@ -430,6 +411,10 @@ var nfRepeater = {"add_repeater_child_field_text":"Add "};
 <script type="text/javascript">
 var sbiajaxurl = "https://rupertstudios.github.io/tggfwordpress/wp-admin/admin-ajax.php";
 </script>
+<style>form.fluent_form_3 .ff-btn-submit { background-color: #909399; color: #ffffff; }</style><script id="fluent-form-submission-js-extra">
+var fluentFormVars = {"ajaxUrl":"https:\/\/rupertstudios.github.io\/tggfwordpress\/wp-admin\/admin-ajax.php","forms":[],"step_text":"Step %activeStep% of %totalStep% - %stepTitle%","is_rtl":"","date_i18n":{"previousMonth":"Previous Month","nextMonth":"Next Month","months":{"shorthand":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"longhand":["January","February","March","April","May","June","July","August","September","October","November","December"]},"weekdays":{"longhand":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"shorthand":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]},"daysInMonth":[31,28,31,30,31,30,31,31,30,31,30,31],"rangeSeparator":" to ","weekAbbreviation":"Wk","scrollTitle":"Scroll to increment","toggleTitle":"Click to toggle","amPM":["AM","PM"],"yearAriaLabel":"Year"},"pro_version":"","fluentform_version":"4.3.15","force_init":"","stepAnimationDuration":"350","upload_completed_txt":"100% Completed","upload_start_txt":"0% Completed","uploading_txt":"Uploading","choice_js_vars":{"noResultsText":"No results found","loadingText":"Loading...","noChoicesText":"No choices to choose from","itemSelectText":"Press to select","maxItemText":"Only %%maxItemCount%% options can be added"},"input_mask_vars":{"clearIfNotMatch":false}};
+</script>
+<script src="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/fluentform/public/js/form-submission.js" id="fluent-form-submission-js"></script>
 <script src="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/mystickymenu/js/detectmobilebrowser.js" id="detectmobilebrowser-js"></script>
 <script id="mystickymenu-js-extra">
 var option = {"mystickyClass":".wp-container-6","activationHeight":"0","disableWidth":"0","disableLargeWidth":"0","adminBar":"false","device_desktop":"1","device_mobile":"1","mystickyTransition":"slide","mysticky_disable_down":"false"};
@@ -439,230 +424,5 @@ var option = {"mystickyClass":".wp-container-6","activationHeight":"0","disableW
 var complianz = {"prefix":"cmplz_","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"23","version":"6.3.3","store_consent":"","do_not_track":"","consenttype":"optin","region":"eu","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/wp-json\/complianz\/v1\/","locale":"lang=en&locale=en_US","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"15","cookie_path":"\/tggfwordpress\/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https:\/\/rupertstudios.github.io\/tggfwordpress\/wp-content\/uploads\/complianz\/css\/banner-{banner_id}-{type}.css?v=23","page_links":{"eu":{"cookie-statement":{"title":"Cookie Policy","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/cookie-policy\/"},"privacy-statement":{"title":"Privacy Policy","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/privacy-policy\/"},"impressum":{"title":"Imprint","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/imprint\/"}},"us":{"impressum":{"title":"Imprint","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/imprint\/"}},"uk":{"impressum":{"title":"Imprint","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/imprint\/"}},"ca":{"impressum":{"title":"Imprint","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/imprint\/"}},"au":{"impressum":{"title":"Imprint","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/imprint\/"}},"za":{"impressum":{"title":"Imprint","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/imprint\/"}},"br":{"impressum":{"title":"Imprint","url":"https:\/\/rupertstudios.github.io\/tggfwordpress\/imprint\/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":""};
 </script>
 <script defer src="https://rupertstudios.github.io/tggfwordpress/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js" id="cmplz-cookiebanner-js"></script>
-<script id="tmpl-nf-layout" type="text/template">
-	<span id="nf-form-title-{{{ data.id }}}" class="nf-form-title">
-		{{{ ( 1 == data.settings.show_title ) ? '<h3>' + data.settings.title + '' : '' }}}
-	
-	<div class="nf-form-wrap ninja-forms-form-wrap">
-		<div class="nf-response-msg">
-		<div class="nf-debug-msg">
-		<div class="nf-before-form">
-		<div class="nf-form-layout">
-		<div class="nf-after-form">
-	
-</script>
-
-<script id="tmpl-nf-empty" type="text/template">
-
-</script>
-<script id="tmpl-nf-before-form" type="text/template">
-	{{{ data.beforeForm }}}
-</script><script id="tmpl-nf-after-form" type="text/template">
-	{{{ data.afterForm }}}
-</script><script id="tmpl-nf-before-fields" type="text/template">
-    <div class="nf-form-fields-required">{{{ data.renderFieldsMarkedRequired() }}}
-    {{{ data.beforeFields }}}
-</script><script id="tmpl-nf-after-fields" type="text/template">
-    {{{ data.afterFields }}}
-    <div id="nf-form-errors-{{{ data.id }}}" class="nf-form-errors" role="alert">
-    <div class="nf-form-hp">
-</script>
-<script id="tmpl-nf-before-field" type="text/template">
-    {{{ data.beforeField }}}
-</script><script id="tmpl-nf-after-field" type="text/template">
-    {{{ data.afterField }}}
-</script><script id="tmpl-nf-form-layout" type="text/template">
-	<form>
-		<div>
-			<div class="nf-before-form-content">
-			<div class="nf-form-content {{{ data.element_class }}}">
-			<div class="nf-after-form-content">
-		
-	
-</script><script id="tmpl-nf-form-hp" type="text/template">
-	<label for="nf-field-hp-{{{ data.id }}}" aria-hidden="true">
-		{{{ nfi18n.formHoneypot }}}
-		<input id="nf-field-hp-{{{ data.id }}}" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value=""/>
-	
-</script>
-<script id="tmpl-nf-field-layout" type="text/template">
-    <div id="nf-field-{{{ data.id }}}-container" class="nf-field-container {{{ data.type }}}-container {{{ data.renderContainerClass() }}}">
-        <div class="nf-before-field">
-        <div class="nf-field">
-        <div class="nf-after-field">
-    
-</script>
-<script id="tmpl-nf-field-before" type="text/template">
-    {{{ data.beforeField }}}
-</script><script id="tmpl-nf-field-after" type="text/template">
-    <#
-    /*
-     * Render our input limit section if that setting exists.
-     */
-    #>
-    <div class="nf-input-limit">
-    <#
-    /*
-     * Render our error section if we have an error.
-     */
-    #>
-    <div id="nf-error-{{{ data.id }}}" class="nf-error-wrap nf-error" role="alert">
-    <#
-    /*
-     * Render any custom HTML after our field.
-     */
-    #>
-    {{{ data.afterField }}}
-</script>
-<script id="tmpl-nf-field-wrap" type="text/template">
-	<div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
-		<#
-		/*
-		 * This is our main field template. It's called for every field type.
-		 * Note that must have ONE top-level, wrapping element. i.e. a div/span/etc that wraps all of the template.
-		 */
-        #>
-		<#
-		/*
-		 * Render our label.
-		 */
-        #>
-		{{{ data.renderLabel() }}}
-		<#
-		/*
-		 * Render our field element. Uses the template for the field being rendered.
-		 */
-        #>
-		<div class="nf-field-element">{{{ data.renderElement() }}}
-		<#
-		/*
-		 * Render our Description Text.
-		 */
-        #>
-		{{{ data.renderDescText() }}}
-	
-</script>
-<script id="tmpl-nf-field-wrap-no-label" type="text/template">
-    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
-        <div class="nf-field-label">
-        <div class="nf-field-element">{{{ data.renderElement() }}}
-        <div class="nf-error-wrap">
-    
-</script>
-<script id="tmpl-nf-field-wrap-no-container" type="text/template">
-
-        {{{ data.renderElement() }}}
-
-        <div class="nf-error-wrap">
-</script>
-<script id="tmpl-nf-field-label" type="text/template">
-	<div class="nf-field-label"><label for="nf-field-{{{ data.id }}}"
-	                                   id="nf-label-field-{{{ data.id }}}"
-	                                   class="{{{ data.renderLabelClasses() }}}">{{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}} {{{ ( 'undefined' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*' : '' }}} {{{ data.maybeRenderHelp() }}}
-</script>
-<script id="tmpl-nf-field-error" type="text/template">
-	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}
-</script><script id="tmpl-nf-form-error" type="text/template">
-	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}
-</script><script id="tmpl-nf-field-input-limit" type="text/template">
-    {{{ data.currentCount() }}} {{{ nfi18n.of }}} {{{ data.input_limit }}} {{{ data.input_limit_msg }}}
-</script><script id="tmpl-nf-field-null" type="text/template">
-</script><script id="tmpl-nf-field-textbox" type="text/template">
-	<input
-			type="text"
-			value="{{{ _.escape( data.value ) }}}"
-			class="{{{ data.renderClasses() }}} nf-element"
-			{{{ data.renderPlaceholder() }}}
-			{{{ data.maybeDisabled() }}}
-			{{{ data.maybeInputLimit() }}}
-
-			id="nf-field-{{{ data.id }}}"
-			<# if( ! data.disable_browser_autocomplete && -1 < [ 'city', 'zip' ].indexOf( data.type ) ){ #>
-				name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
-				autocomplete="on"
-			<# } else { #>
-				name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}"
-				{{{ data.maybeDisableAutocomplete() }}}
-			<# } #>
-
-			aria-invalid="false"
-			aria-describedby="nf-error-{{{ data.id }}}"
-			aria-labelledby="nf-label-field-{{{ data.id }}}"
-
-			{{{ data.maybeRequired() }}}
-	>
-</script>
-<script id="tmpl-nf-field-input" type="text/template">
-    <input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ _.escape( data.value ) }}}" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}}
-           aria-labelledby="nf-label-field-{{{ data.id }}}"
-
-            {{{ data.maybeRequired() }}}
-    >
-</script>
-<script id="tmpl-nf-field-email" type="text/template">
-	<input
-			type="email"
-			value="{{{ _.escape( data.value ) }}}"
-			class="{{{ data.renderClasses() }}} nf-element"
-
-			id="nf-field-{{{ data.id }}}"
-			<# if( ! data.disable_browser_autocompletes ){ #>
-			name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
-			autocomplete="email"
-			<# } else { #>
-			name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}"
-			{{{ data.maybeDisableAutocomplete() }}}
-			<# } #>
-			{{{ data.renderPlaceholder() }}}
-			{{{ data.maybeDisabled() }}}
-
-			aria-invalid="false"
-			aria-describedby="nf-error-{{{ data.id }}}"
-			aria-labelledby="nf-label-field-{{{ data.id }}}"
-
-			{{{ data.maybeRequired() }}}
-	>
-</script>
-<script id="tmpl-nf-field-textarea" type="text/template">
-    <textarea id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}} {{{ data.maybeDisableAutocomplete() }}} {{{ data.maybeInputLimit() }}}
-        aria-labelledby="nf-label-field-{{{ data.id }}}"
-
-        {{{ data.maybeRequired() }}}
-    >{{{ _.escape( data.value ) }}}
-</script>
-
-
-
-<script id="tmpl-nf-rte-media-button" type="text/template">
-    <span class="dashicons dashicons-admin-media">
-</script>
-
-<script id="tmpl-nf-rte-link-button" type="text/template">
-    <span class="dashicons dashicons-admin-links">
-</script>
-
-<script id="tmpl-nf-rte-unlink-button" type="text/template">
-    <span class="dashicons dashicons-editor-unlink">
-</script>
-
-<script id="tmpl-nf-rte-link-dropdown" type="text/template">
-    <div class="summernote-link">
-        URL
-        <input type="url" class="widefat code link-url"> <br />
-        Text
-        <input type="url" class="widefat code link-text"> <br />
-        <label>
-            <input type="checkbox" class="link-new-window"> {{{ nfi18n.fieldsTextareaOpenNewWindow }}}
-        
-        <input type="button" class="cancel-link extra" value="Cancel">
-        <input type="button" class="insert-link extra" value="Insert">
-    
-</script>
-<script id="tmpl-nf-field-submit" type="text/template">
-	<input id="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element " type="button" value="{{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}}" {{{ ( data.disabled ) ? 'disabled' : '' }}}>
-</script><script id="tmpl-nf-field-button" type="text/template">
-    <button id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.classes }}} nf-element">
-        {{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}}
-    
-</script></body>
+</body>
 </html>
