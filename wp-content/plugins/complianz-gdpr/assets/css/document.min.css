@@ -9,7 +9,7 @@
 #cmplz-cookies-overview .cmplz-dropdown summary div, #cmplz-document .cmplz-dropdown summary div {display: grid;grid-template: "heading chevron";grid-template-columns: 2fr 25px;grid-gap: 15px;align-items: center;}
 #cmplz-cookies-overview .cmplz-dropdown summary div h3, #cmplz-document .cmplz-dropdown summary div h3 {grid-area: heading;margin: 0;}
 #cmplz-cookies-overview .cmplz-dropdown summary div:after, #cmplz-document .cmplz-dropdown summary div:after {grid-area: chevron;}
-#cmplz-cookies-overview .cmplz-dropdown summary div input[data-category="functional"], #cmplz-document .cmplz-dropdown summary div input[data-category="functional"] {visibility: hidden;}
+#cmplz-cookies-overview .cmplz-dropdown summary div input[data-service="google-fonts"], #cmplz-document .cmplz-dropdown summary div input[data-service="google-fonts"], #cmplz-cookies-overview .cmplz-dropdown summary div input[data-category="functional"], #cmplz-document .cmplz-dropdown summary div input[data-category="functional"] {visibility: hidden;}
 #cmplz-cookies-overview .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary, #cmplz-document .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary {display: block;}
 #cmplz-cookies-overview .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary div, #cmplz-document .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary div {grid-template: "heading paragraph checkbox chevron";grid-template-columns: 2fr auto auto 25px;}
 #cmplz-cookies-overview .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary div p, #cmplz-document .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary div p {grid-area: paragraph;}
