@@ -41,12 +41,12 @@ select.ff-el-form-control:not([size]):not([multiple]) {height: 38px;}
 .ff-el-section-break .ff-el-section-title {margin-bottom: 5px;}
 .ff-el-section-break hr {margin-bottom: 10px;}
 table.ff_repeater_table {background: transparent !important;border: 0;border-collapse: collapse;border-spacing: 0;margin: 0 0 5px;padding: 0;table-layout: auto !important;vertical-align: middle;width: 100%;}
-table.ff_repeater_table th {font-size: 90%;text-align: left;}
-table.ff_repeater_table th, table.ff_repeater_table tr {background: transparent !important;border: 0;padding: 0;}
-table.ff_repeater_table td {background: transparent !important;border: 0;padding: 0 15px 15px 0;text-align: left;}
+table.ff_repeater_table th {font-size: 90%;padding: 0;text-align: left;}
+table.ff_repeater_table th, table.ff_repeater_table tr {background: transparent !important;border: 0;padding-top: 5px;}
+table.ff_repeater_table td {background: transparent !important;border: 0;max-width: 100%;padding: 0 15px 15px 0;text-align: left;width: 282px;}
 table.ff_repeater_table tbody tr:only-child td .repeat-minus {visibility: hidden;}
 table.ff_repeater_table .ff-el-group {margin: 0;padding: 0;}
-table.ff_repeater_table .repeat_btn {padding-right: 0;vertical-align: middle;}
+table.ff_repeater_table .repeat_btn {padding-right: 0;vertical-align: middle;width: 30px;}
 table.ff_repeater_table .repeat_btn span.ff-icon {cursor: pointer;margin-right: 10px;}
 table.ff_repeater_table .repeat_btn span.ff-icon.icon-minus-circle {margin-right: 0;}
 table.ff_repeater_table.repeat-maxed .repeat_btn .repeat-plus {visibility: hidden;}
@@ -59,7 +59,7 @@ table.ff_repeater_table.repeat-maxed .repeat_btn .repeat-plus {visibility: hidde
 	table.ff_flexible_table.ff-checkable-grids tbody tr:nth-child(2n)>td {background: transparent;}
 	table.ff_flexible_table thead {left: -9999px;position: absolute;top: -9999px;}
 	table.ff_flexible_table tbody tr {background: #fff;border-bottom: 1px solid #ced4da;border-top: 1px solid #ced4da;border-color: #ced4da;border-style: solid;border-width: 2px 1px 4px;display: block;margin: 16px 0 10px;padding-top: 12px !important;position: relative;}
-	table.ff_flexible_table tbody tr td {display: block;margin-left: 8px;margin-right: 8px;}
+	table.ff_flexible_table tbody tr td {display: block;margin-left: 8px;margin-right: 8px;padding: 5px;}
 	table.ff_flexible_table tbody tr td:before {clear: both;content: attr(data-label);display: block;font-size: .875em;letter-spacing: .5pt;white-space: nowrap;}
 	table.ff_flexible_table tbody tr td.repeat_btn {background-color: #eee;margin-left: 0;padding: 10px !important;width: 100% !important;}
 	table.ff_flexible_table tbody tr td.repeat_btn .ff-el-repeat-buttons-list {float: none;width: 100%;}}
