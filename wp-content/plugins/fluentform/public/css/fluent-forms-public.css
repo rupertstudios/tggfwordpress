@@ -4,7 +4,8 @@
 	.frm-fluent-form .ff-t-container.ff_cond_v {display: flex !important;}
 	.frm-fluent-form .ff-t-cell {vertical-align: inherit;width: 100%;}
 	.frm-fluent-form .ff-t-cell:first-of-type {padding-left: 0;}
-	.frm-fluent-form .ff-t-cell:last-of-type {flex-grow: 1;padding-right: 0;}}
+	.frm-fluent-form .ff-t-cell:last-of-type {flex-grow: 1;padding-right: 0;}
+	.frm-fluent-form .ff-t-cell .ff_submit_btn_wrapper_custom {margin-top: 28px;}}
 @media (max-width:768px) {.ff-t-cell {margin-left: 0 !important;}}
 .fluentform .ff-el-group {margin-bottom: 20px;}
 .fluentform .ff-el-group.ff-el-form-top .ff-el-input--label {display: inline-block;float: none;margin-bottom: 5px;text-align: left;}
