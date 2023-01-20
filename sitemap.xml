@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://rupertstudios.github.io/tggfwordpress/wp-sitemap-index.xsl" ?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://rupertstudios.github.io/tggfwordpress/wp-sitemap-posts-page-1.xml</loc></sitemap><sitemap><loc>https://rupertstudios.github.io/tggfwordpress/wp-sitemap-users-1.xml</loc></sitemap></sitemapindex>
+<!-- This sitemap was dynamically generated on 01/20/2023 at 14:06 by All in One SEO v4.2.9 - the original SEO plugin for WordPress. -->
+
+<?xml-stylesheet type="text/xsl" href="https://rupertstudios.github.io/tggfwordpress/default.xsl?sitemap=root"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<sitemap>
+		<loc><![CDATA[https://rupertstudios.github.io/tggfwordpress/page-sitemap.xml]]></loc>
+		<lastmod><![CDATA[2023-01-20T13:05:49+00:00]]></lastmod>
+	</sitemap>
+</sitemapindex>
