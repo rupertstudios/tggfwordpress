@@ -58,7 +58,7 @@
 	100% {-webkit-transform: rotate(359deg);transform: rotate(359deg);}}
 .sbi-screenreader {text-indent: -9999px !important;display: block !important;width: 0 !important;height: 0 !important;line-height: 0 !important;text-align: left !important;overflow: hidden !important;}
 #sb_instagram .sb_instagram_header, .sb_instagram_header {float: left;clear: both;margin: 0 0 15px 0;padding: 0;line-height: 1.2;width: 100%;}
-#sb_instagram .sb_instagram_header a, .sb_instagram_header a {float: left;display: block;min-width: 100% \9;text-decoration: none;transition: color .5s ease;}
+#sb_instagram .sb_instagram_header a, .sb_instagram_header a {float: left;display: block;min-width: 100%;text-decoration: none;transition: color .5s ease;}
 .sb_instagram_header.sbi_header_outside {float: none;margin-left: auto !important;margin-right: auto !important;display: flex;}
 .sbi_no_avatar .sbi_header_img {background: #333;color: #fff;width: 50px;height: 50px;position: relative;}
 .sbi_no_avatar .sbi_header_hashtag_icon {display: block;color: #fff;opacity: .9;-webkit-transition: background .6s linear,color .6s linear;-moz-transition: background .6s linear,color .6s linear;-o-transition: background .6s linear,color .6s linear;transition: background .6s linear,color .6s linear;}
