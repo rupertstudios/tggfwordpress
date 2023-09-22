@@ -100,3 +100,4 @@
 .wp-block-social-links.is-style-logos-only .wp-social-link-youtube {color: red;}
 .wp-block-social-links.is-style-pill-shape .wp-social-link {width: auto;}
 .wp-block-social-links.is-style-pill-shape .wp-social-link a {padding-left: .66667em;padding-right: .66667em;}
+.wp-block-social-links:not(.has-icon-color):not(.has-icon-background-color) .wp-social-link-snapchat .wp-block-social-link-label {color: #000;}
