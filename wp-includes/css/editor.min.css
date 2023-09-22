@@ -297,4 +297,4 @@ div.wp-link-input input {width: 300px;padding: 3px;box-sizing: border-box;line-h
 .mce-rtl .mce-flow-layout .mce-flow-layout-item>div {direction: rtl;}
 .mce-rtl .mce-listbox i.mce-caret {left: 6px;}
 html:lang(he-il) .rtl .quicktags-toolbar input, html:lang(he-il) .rtl .wp-switch-editor {font-family: Arial,sans-serif;}
-@media print,(-webkit-min-device-pixel-ratio:1.25),(min-resolution:120dpi) {.wp-media-buttons .add_media span.wp-media-buttons-icon {background: 0 0;}}
+@media print,(min-resolution:120dpi) {.wp-media-buttons .add_media span.wp-media-buttons-icon {background: 0 0;}}
