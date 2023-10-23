@@ -231,112 +231,117 @@ jQuery(document).ready(function($){
 	});
 	
 	jQuery( '.mysticky-welcomebar-close, .mysticky-welcomebar-btn a' ).on( 'click', function(){
+		/* Submit contact lead form */
+		var flag				= true;
+		var trigger_sec 		= 100;
+		var welcomebar_widget 	= 0;	
+		if( jQuery(".mysticky-welcomebar-lead-content").length > 0 && !$(this).hasClass("mysticky-welcomebar-close")){
+
+			if( jQuery('#contact-lead-name-'+welcomebar_widget).val() != '' && ( jQuery('#contact-lead-phone-'+welcomebar_widget).val() != '' || jQuery('#contact-lead-email-'+welcomebar_widget).val() != '' )){
+
+				if( jQuery('#contact-lead-email-'+welcomebar_widget).css("display") != 'none' &&  IsEmail(jQuery('#contact-lead-email-'+welcomebar_widget).val()) != true ){
+					
+					if( $(".input-error").length ){
+						$(".input-error").remove();
+					}
+
+					$( '<div class="input-error"><span>Please, enter valid email</span></div>' ).insertAfter( jQuery('#contact-lead-email-' + welcomebar_widget) );
+					flag = false;
+				}	
 
 
-	/* Submit contact lead form */
-
-	var flag=true;
-	var trigger_sec = 100;
-	var welcomebar_widget = 0;	
-	if( jQuery(".mysticky-welcomebar-lead-content").length > 0 && !$(this).hasClass("mysticky-welcomebar-close")){
-
-		if( jQuery('#contact-lead-name-'+welcomebar_widget).val() != '' && ( jQuery('#contact-lead-phone-'+welcomebar_widget).val() != '' || jQuery('#contact-lead-email-'+welcomebar_widget).val() != '' )){
-
-			if( jQuery('#contact-lead-email-'+welcomebar_widget).css("display") != 'none' &&  IsEmail(jQuery('#contact-lead-email-'+welcomebar_widget).val()) != true ){
+				if( jQuery('#contact-lead-phone-'+welcomebar_widget).css("display") != 'none' &&  validatePhone(jQuery('#contact-lead-phone-'+welcomebar_widget).val()) != true  ){
+					if( $(".input-error").length ){
+						$(".input-error").remove();
+					}
+					$( '<div class="input-error"><span>Please, enter valid phone</span></div>' ).insertAfter( jQuery('#contact-lead-phone-'+welcomebar_widget) );
+					flag=false;
+				}	
 				
-				if( $(".input-error").length ){
-					$(".input-error").remove();
+				if (flag == true) {
+					var data = [];
+					data["contact_name"] = jQuery('#contact-lead-name-'+welcomebar_widget).val();
+					data["contact_email"] = jQuery('#contact-lead-email-'+welcomebar_widget).val();
+					data["contact_phone"] = jQuery('#contact-lead-phone-'+welcomebar_widget).val();
+					data["contact_page_link"] = jQuery('#contact-lead-pagelink-'+welcomebar_widget).val();
+					
+					
+					var sucess_message = $( '.mysticky-welcomebar-fixed' ).data('show-success-message');
+					if ( sucess_message == 1) {
+						$(".mysticky-welcomebar-fixed .mysticky-welcomebar-lead-content").hide();
+						$(".mysticky-welcomebar-fixed .mysticky-welcomebar-content p").hide();
+						$(".mysticky-welcomebar-fixed .mysticky-welcomebar-btn.contact-lead-button").hide();
+						$(".mysticky-welcomebar-fixed .mysticky-welcomebar-thankyou-content").show();
+						$(".mysticky-welcomebar-fixed .mysticky-welcomebar-thankyou-content p").show();
+					}
+					var trigger_sec = 2000;
+					jQuery.ajax({
+						url: welcomebar_frontjs.ajaxurl,
+						type:'post',
+						data: 'contact_name='+data["contact_name"]+'&contact_email='+data["contact_email"]+'&contact_phone='+data["contact_phone"]+'&action=stickymenu_contact_lead_form&widget_id=' + welcomebar_widget  + '&page_link='+ data["contact_page_link"]+'&save_form_lead=1&wpnonce=' + welcomebar_frontjs.ajax_nonce,
+						success: function( data ){					
+							$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","0");							
+							jQuery('#contact-lead-name-'+welcomebar_widget).val('');
+							jQuery('#contact-lead-email-'+welcomebar_widget).val('');
+							jQuery('#contact-lead-phone-'+welcomebar_widget).val('');
+							
+						},
+					});
+				}else{
+					$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","10px");
+					return false;
 				}
 
-				$( '<div class="input-error"><span>Please, enter valid email</span></div>' ).insertAfter( jQuery('#contact-lead-email-' + welcomebar_widget) );
-				flag = false;
-			}	
-
-
-			if( jQuery('#contact-lead-phone-'+welcomebar_widget).css("display") != 'none' &&  validatePhone(jQuery('#contact-lead-phone-'+welcomebar_widget).val()) != true  ){
-				if( $(".input-error").length ){
-					$(".input-error").remove();
-				}
-				$( '<div class="input-error"><span>Please, enter valid phone</span></div>' ).insertAfter( jQuery('#contact-lead-phone-'+welcomebar_widget) );
-				flag=false;
-			}	
-			
-			if (flag == true) {
-				var data = [];
-				data["contact_name"] = jQuery('#contact-lead-name-'+welcomebar_widget).val();
-				data["contact_email"] = jQuery('#contact-lead-email-'+welcomebar_widget).val();
-				data["contact_phone"] = jQuery('#contact-lead-phone-'+welcomebar_widget).val();
-				data["contact_page_link"] = jQuery('#contact-lead-pagelink-'+welcomebar_widget).val();
 				
-				$(".mysticky-welcomebar-fixed .mysticky-welcomebar-lead-content").hide();
-				$(".mysticky-welcomebar-fixed .mysticky-welcomebar-content p").hide();
-				$(".mysticky-welcomebar-fixed .mysticky-welcomebar-btn.contact-lead-button").hide();
-				$(".mysticky-welcomebar-fixed .mysticky-welcomebar-thankyou-content").show();
-				$(".mysticky-welcomebar-fixed .mysticky-welcomebar-thankyou-content p").show();
-				var trigger_sec = 2000;
-				jQuery.ajax({
-					url: welcomebar_frontjs.ajaxurl,
-					type:'post',
-					data: 'contact_name='+data["contact_name"]+'&contact_email='+data["contact_email"]+'&contact_phone='+data["contact_phone"]+'&action=stickymenu_contact_lead_form&widget_id=' + welcomebar_widget  + '&page_link='+ data["contact_page_link"]+'&save_form_lead=1&wpnonce=' + welcomebar_frontjs.ajax_nonce,
-					success: function( data ){					
-						$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","0");
-					},
-				});
 			}else{
-				$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","10px");
+				localStorage.removeItem('welcomebar_close_' + welcomebar_widget);
+				sessionStorage.removeItem('welcomebar_close_' + welcomebar_widget);
+				
+				if($(".input-error").length){
+					$(".input-error").remove();
+				}
+
+				if( jQuery('#contact-lead-name-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-name-'+welcomebar_widget).val() == '' && jQuery('#contact-lead-email-'+welcomebar_widget).css("display") != 'none' &&  jQuery('#contact-lead-email-'+welcomebar_widget).val() == '' ){
+
+					$( '<div class="input-error"><span>Please enter your name and email</span></div>' ).insertAfter( jQuery('#contact-lead-name-'+welcomebar_widget) );
+					flag=false;
+
+				}else if( jQuery('#contact-lead-name-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-name-'+welcomebar_widget).val() == '' && jQuery('#contact-lead-phone-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-phone-'+welcomebar_widget).val() == '' ){
+
+					$( '<div class="input-error"><span>Please enter your name and phone</span></div>' ).insertAfter( jQuery('#contact-lead-name-'+welcomebar_widget) );
+					flag=false;
+
+				}else if( jQuery('#contact-lead-name-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-name-'+welcomebar_widget).val() == '' ){
+
+					$( '<div class="input-error"><span>Please enter your name</span></div>' ).insertAfter( jQuery('#contact-lead-name-'+welcomebar_widget) );
+					flag=false;
+
+				}else if( jQuery('#contact-lead-email-'+welcomebar_widget).css("display") != 'none' &&  jQuery('#contact-lead-email-'+welcomebar_widget).val() == '' ){
+
+					$( '<div class="input-error"><span>Please, enter your email</span></div>' ).insertAfter( jQuery('#contact-lead-email-'+welcomebar_widget) );
+					flag=false;
+
+				}else if( jQuery('#contact-lead-phone-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-phone-'+welcomebar_widget).val() == '' ){
+
+					$( '<div class="input-error"><span>Please, enter your phone</span></div>' ).insertAfter( jQuery('#contact-lead-phone-'+welcomebar_widget) );
+					flag=false;
+
+				}
+
+				if(flag==false){
+					
+					$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","10px");
+				} else{
+					$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","0");
+				}
 				return false;
 			}
-
-			
 		}else{
-			localStorage.removeItem('welcomebar_close_' + welcomebar_widget);
-			sessionStorage.removeItem('welcomebar_close_' + welcomebar_widget);
-			
-			if($(".input-error").length){
-				$(".input-error").remove();
+			if( $(this).hasClass("mysticky-welcomebar-close") ){
+				localStorage.setItem('is_close_trigger_' + welcomebar_widget, 'yes');
 			}
-
-			if( jQuery('#contact-lead-name-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-name-'+welcomebar_widget).val() == '' && jQuery('#contact-lead-email-'+welcomebar_widget).css("display") != 'none' &&  jQuery('#contact-lead-email-'+welcomebar_widget).val() == '' ){
-
-				$( '<div class="input-error"><span>Please enter your name and email</span></div>' ).insertAfter( jQuery('#contact-lead-name-'+welcomebar_widget) );
-				flag=false;
-
-			}else if( jQuery('#contact-lead-name-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-name-'+welcomebar_widget).val() == '' && jQuery('#contact-lead-phone-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-phone-'+welcomebar_widget).val() == '' ){
-
-				$( '<div class="input-error"><span>Please enter your name and phone</span></div>' ).insertAfter( jQuery('#contact-lead-name-'+welcomebar_widget) );
-				flag=false;
-
-			}else if( jQuery('#contact-lead-name-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-name-'+welcomebar_widget).val() == '' ){
-
-				$( '<div class="input-error"><span>Please enter your name</span></div>' ).insertAfter( jQuery('#contact-lead-name-'+welcomebar_widget) );
-				flag=false;
-
-			}else if( jQuery('#contact-lead-email-'+welcomebar_widget).css("display") != 'none' &&  jQuery('#contact-lead-email-'+welcomebar_widget).val() == '' ){
-
-				$( '<div class="input-error"><span>Please, enter your email</span></div>' ).insertAfter( jQuery('#contact-lead-email-'+welcomebar_widget) );
-				flag=false;
-
-			}else if( jQuery('#contact-lead-phone-'+welcomebar_widget).css("display") != 'none' && jQuery('#contact-lead-phone-'+welcomebar_widget).val() == '' ){
-
-				$( '<div class="input-error"><span>Please, enter your phone</span></div>' ).insertAfter( jQuery('#contact-lead-phone-'+welcomebar_widget) );
-				flag=false;
-
-			}
-
-			if(flag==false){
-				
-				$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","10px");
-			} else{
-				$(".mysticky-welcomebar-widget-"+welcomebar_widget+" .mysticky-welcomebar-fixed-wrap").css("margin-bottom","0");
-			}
-			return false;
 		}
-	}else{
-		if( $(this).hasClass("mysticky-welcomebar-close") ){
-			localStorage.setItem('is_close_trigger_' + welcomebar_widget, 'yes');
-		}
-	}
-	
+		
 		setTimeout(function(){
 			if( welcombar_aftersubmission != 'show_welcomebar_every_page' ){
 				if( welcombar_aftersubmission == 'dont_show_welcomebar' ){
@@ -369,7 +374,11 @@ jQuery(document).ready(function($){
 				$( '.mystickyelements-fixed' ).css( 'top', '' );
 				$( 'html' ).attr( 'style', 'margin-top: ' + mystickyelements_height + 'px !important' );
 			}
+			
 		}, trigger_sec );
+		jQuery('#contact-lead-name-'+welcomebar_widget).val('');
+		jQuery('#contact-lead-email-'+welcomebar_widget).val('');
+		jQuery('#contact-lead-phone-'+welcomebar_widget).val('');
 	} );
 });
 function mystickyelements_present() {
