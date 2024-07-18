@@ -8,19 +8,10 @@
 .wp-block-image .alignleft {float: left;margin: .5em 1em .5em 0;}
 .wp-block-image .alignright {float: right;margin: .5em 0 .5em 1em;}
 .wp-block-image .aligncenter {margin-left: auto;margin-right: auto;}
-.wp-block-image figcaption {margin-bottom: 1em;margin-top: .5em;}
-.wp-block-image .is-style-rounded img, .wp-block-image.is-style-circle-mask img, .wp-block-image.is-style-rounded img {border-radius: 9999px;}
+.wp-block-image :where(figcaption) {margin-bottom: 1em;margin-top: .5em;}
+.wp-block-image.is-style-circle-mask img {border-radius: 9999px;}
 @supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none) {.wp-block-image.is-style-circle-mask img {border-radius: 0;-webkit-mask-image: url("data:image/svg+xml;utf8,<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"50\"/></svg>");mask-image: url("data:image/svg+xml;utf8,<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"50\" cy=\"50\" r=\"50\"/></svg>");mask-mode: alpha;-webkit-mask-position: center;mask-position: center;-webkit-mask-repeat: no-repeat;mask-repeat: no-repeat;-webkit-mask-size: contain;mask-size: contain;}}
-.wp-block-image :where(.has-border-color) {border-style: solid;}
-.wp-block-image :where([style*=border-top-color]) {border-top-style: solid;}
-.wp-block-image :where([style*=border-right-color]) {border-right-style: solid;}
-.wp-block-image :where([style*=border-bottom-color]) {border-bottom-style: solid;}
-.wp-block-image :where([style*=border-left-color]) {border-left-style: solid;}
-.wp-block-image :where([style*=border-width]) {border-style: solid;}
-.wp-block-image :where([style*=border-top-width]) {border-top-style: solid;}
-.wp-block-image :where([style*=border-right-width]) {border-right-style: solid;}
-.wp-block-image :where([style*=border-bottom-width]) {border-bottom-style: solid;}
-.wp-block-image :where([style*=border-left-width]) {border-left-style: solid;}
+:root :where(.wp-block-image.is-style-rounded img, .wp-block-image .is-style-rounded img) {border-radius: 9999px;}
 .wp-block-image figure {margin: 0;}
 .wp-lightbox-container {display: flex;flex-direction: column;position: relative;}
 .wp-lightbox-container img {cursor: zoom-in;}
